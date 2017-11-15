@@ -10,7 +10,7 @@ using UserMicroService.Models;
 namespace UserMicroService.Tests
 {
     public class UserTest
-    {
+    {/*
         public void ClearUsers () {
 
             UserDB.listOfUser.Clear();
@@ -191,7 +191,7 @@ namespace UserMicroService.Tests
             UserDB.RemoveUser(2);
 
             Assert.AreEqual(1, UserDB.listOfUser.Count);
-        }
+        }*/
 
     }
    
