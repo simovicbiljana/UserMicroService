@@ -17,6 +17,8 @@ namespace UserMicroService.DataAccess
                     return user;
                 }
             }
+
+            Console.WriteLine("User with this id already exists!");
             return null;
 
         }
@@ -29,6 +31,8 @@ namespace UserMicroService.DataAccess
                     return user;
                 }
             }
+
+            Console.WriteLine("User with this name already exists!");
             return null;
         }
 
@@ -38,10 +42,20 @@ namespace UserMicroService.DataAccess
         }
 
         public static User CreateUser(User user) {
-
             listOfUser.Add(user);
             return GetUserId(user.Id);
 
+        }
+
+        public static void RemoveUser(int id) {
+            User user = GetUserId(id);
+            listOfUser.Remove(user);
+        }
+
+        public static void ModifyUser(User u) {
+            User user = GetUserId(u.Id);
+            listOfUser.Remove(user);
+            listOfUser.Add(u);
         }
         
     }
